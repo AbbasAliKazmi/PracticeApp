@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import FirstBlog from "./FirstBlog/page";
 
 export const metadata: Metadata = {
     title: {
@@ -8,6 +9,8 @@ export const metadata: Metadata = {
 
 export default function Blog(){
     return(
-            <h1>My Blog</h1>
+        <div>
+            <FirstBlog name="Abbas's Blog" message="Welcome to blog. You will enjoy" />
+        </div>    
     )
 }

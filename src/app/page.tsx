@@ -4,7 +4,7 @@ export default function Home() {
     <>
      <h1>Abbas</h1>
      <Link href="/Blog"> Blog</Link>
-     <Link href="/products"> Products</Link>
+     <Link href="/products"> Products</Link> 
     </> 
   )
 };
