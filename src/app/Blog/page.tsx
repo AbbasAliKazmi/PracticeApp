@@ -1,16 +1,25 @@
-import { Metadata } from "next";
-import FirstBlog from "./FirstBlog/page";
+import React from "react";
+import Todo from "./FirstBlog/page";
 
-export const metadata: Metadata = {
-    title: {
-        absolute: "Blog",
-    }
-}
+const myTodoItems = [
+    {
+        id: 1,
+        title: "Abbas eat food",
+    },
+    {
+        id: 2,
+        title: "Abbas sleep",
+    },
+    {
+        id: 3,
+        title: "Abbas play",
+    }    
+  ]
 
 export default function Blog(){
     return(
         <div>
-            <FirstBlog name="Abbas's Blog" message="Welcome to blog. You will enjoy" />
+            <Todo items={myTodoItems} />
         </div>    
     )
 }

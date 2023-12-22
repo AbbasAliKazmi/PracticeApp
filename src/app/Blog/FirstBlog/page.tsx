@@ -1,27 +1,31 @@
 import React from 'react';
 
-interface FirstBlog {
-  name: string;
-  message: string;
+interface TodoItem {
+  id: number;
+  title: string;
 }
 
+interface TodoProps {
+  items?: TodoItem[]; // Make items optional
+}
 
-
-
-export default function FirstBlog(props: Readonly<FirstBlog>) {
+export default function FirstBlog(props: Readonly<TodoProps>) {
   return (
-    <div>
-      <h1>Hello,First Blog {props.name}!</h1>
-      <p>{props.message}</p>
+    <div className='todo-container'>
+      <ol>
+        {props.items?.map((item) => (
+          <TodoItem key={item.id} title={item.title} />
+        ))}
+      </ol>
     </div>
   );
 }
-  
 
-// fetch('https://jsonplaceholder.typicode.com/todos/1')
-//       .then(response => response.json())
-//       .then(json => console.log(json))
+// Child component (TodoItem)
+interface TodoItemProps {
+  title: string;
+}
 
-
-
-
+function TodoItem(props: Readonly<TodoItemProps>) {
+  return <li>{props.title}</li>;
+}
