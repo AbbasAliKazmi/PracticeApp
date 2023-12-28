@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import Todo from "./FirstBlog/page";
+import Counter from "../components/counter/page";
 
 const myTodoItems = [
     {
@@ -21,9 +22,14 @@ const myTodoItems = [
   ]
 
 export default function Blog(){
+    const [ state, setState ] = useState<boolean>(true)
     return(
         <div>
             <Todo items={myTodoItems} />
+            <button onClick={e => setState(!state)}>
+               Toggle
+            </button>
+            {state ? <Counter />: ""}
         </div>    
     )
 }
