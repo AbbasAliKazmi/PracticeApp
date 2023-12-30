@@ -3,8 +3,11 @@ export default function Home() {
   return (
     <>
      <h1>Abbas</h1>
-     <Link href="/Blog"> Blog</Link>
-     <Link href="/products"> Products</Link> 
+     <ul>
+      <li><Link href="/Blog"> Blog</Link></li>
+      <li><Link href="/products"> Products</Link> </li>
+      <li><Link href="/items"> Items</Link></li>
+      </ul> 
     </> 
   )
 };
