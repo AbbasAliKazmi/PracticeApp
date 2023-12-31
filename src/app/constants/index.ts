@@ -1,2 +1,1 @@
-const Apiurl = "https://cat-fact.herokuapp.com/facts";
-export default Apiurl;
+export const url = "https://simple-books-api.glitch.me"
