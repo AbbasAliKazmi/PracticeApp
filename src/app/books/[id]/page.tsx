@@ -25,6 +25,7 @@ const BooksPage = async({params}: IProps) => {
           <h1>Books name is {book.name}</h1>
           <h1>Books author is {book.author}</h1>
           <h1>Books price is {book.price}</h1>
+          <h1>Current Stock{book["current-stock"]}</h1>
       </div>
   )
 
