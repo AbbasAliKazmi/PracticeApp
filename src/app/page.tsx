@@ -8,6 +8,7 @@ export default function Home() {
       <li><Link href="/Blog"> Blog</Link></li>
       <li><Link href="/products"> Products</Link> </li>
       <li><Link href="/items"> Items</Link></li>
+      <li><Link href="/description"> Description</Link></li>
       </ul> 
     </> 
   )
